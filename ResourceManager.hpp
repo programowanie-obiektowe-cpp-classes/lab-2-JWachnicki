@@ -43,9 +43,10 @@ class ResourceManager
 
     ResourceManager& operator(ResourceManager&& CCC)
     {
-        //delete resource; //W jakimś kodzie w internecie było - nie wiem czy potrzebne
+        delete resource; //W jakimś kodzie w internecie było - nie wiem czy potrzebne
         resource = CCC.resource;
         CCC.resource = nullptr;
+        return *this;
     }
 
     //Getter
