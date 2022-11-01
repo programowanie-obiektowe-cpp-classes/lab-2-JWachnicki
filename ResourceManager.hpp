@@ -22,9 +22,32 @@ class ResourceManager
 
     //Od teraz jest cokolwiek za jakiekolwiek punkty
 
+    //Kopiujący operator przypisania 
+    //To na dole wykomentowane jest dobrze bo to z zajęć
+    /*ResourceManager& operator=(const ResourceManager& AAA)
+    {
+        return *this;
+    }*/
 
+    ResourceManager& operator=(const ResourceManager& AAA)
+    {
+        return *this;
+    }
     
-    
+    //Konstruktor przenoszący
+    ResourceManager(ResourceManager&& BBB)
+    {
+        resource = BBB.resource;
+        BBB.resource = nullptr; //nullprt to takie NULL w C++ 
+    }
+
+    ResourceManager& operator(ResourceManager&& CCC)
+    {
+        //delete resource; //W jakimś kodzie w internecie było - nie wiem czy potrzebne
+        resource = CCC.resource;
+        CCC.resource = nullptr;
+    }
+
     // Sterowanie sekcją private zapobiega wyciekom pamięci
     private:
         Resource* resource;
