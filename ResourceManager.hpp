@@ -35,7 +35,7 @@ class ResourceManager
         if(&AAA != this)
         {
             delete resource;
-            resource = new Resource{*AAA.resource}
+            resource = new Resource{*AAA.resource};
         }
         return *this;
     }
