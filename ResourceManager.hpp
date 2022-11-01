@@ -32,6 +32,11 @@ class ResourceManager
 
     ResourceManager& operator=(const ResourceManager& AAA)
     {
+        if(this != &ResourceManager) //Trzeba dopisać takie coś, żeby poza przypisaniem dodatkowo kopiowało
+        {
+            delete resource;
+            resource = new resource{*AAA.resource}
+        }
         return *this;
     }
     
