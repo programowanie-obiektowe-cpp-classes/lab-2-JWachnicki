@@ -4,5 +4,13 @@
 
 class ResourceManager
 {
-    // Twoja implementacja tutaj
+    ResourceManager() //Inicjalizacja Resource
+    {
+        resource = new Resource;
+    }
+    
+    
+    // Sterowanie z sekcji private zapobiega wyciekom pamięci
+    private:
+        Resource* resource;
 };
