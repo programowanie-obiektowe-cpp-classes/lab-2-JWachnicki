@@ -4,6 +4,7 @@
 
 class ResourceManager
 {
+    public:
     // Te 5 metod to chyba konstruktory, destruktor i kopiujący operator przypisania
     ResourceManager() //Inicjalizacja Resource
     {
