@@ -42,7 +42,7 @@ class ResourceManager
         BBB.resource = nullptr; //nullprt to takie NULL w C++ 
     }
 
-    ResourceManager& operator(ResourceManager&& CCC)
+    ResourceManager& operator=(ResourceManager&& CCC)
     {
         delete resource; //W jakimś kodzie w internecie było - nie wiem czy potrzebne
         resource = CCC.resource;
