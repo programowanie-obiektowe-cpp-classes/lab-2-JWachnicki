@@ -19,9 +19,13 @@ class ResourceManager
     {
         resource = new Resource{Kopia.resource};
     }
+
+    //Od teraz jest cokolwiek za jakiekolwiek punkty
+
+
     
     
-    // Sterowanie z sekcji private zapobiega wyciekom pamięci
+    // Sterowanie sekcją private zapobiega wyciekom pamięci
     private:
         Resource* resource;
 };
