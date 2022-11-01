@@ -48,6 +48,12 @@ class ResourceManager
         CCC.resource = nullptr;
     }
 
+    //Getter
+    double get()
+    {
+        return resource->get();
+    }
+
     // Sterowanie sekcją private zapobiega wyciekom pamięci
     private:
         Resource* resource;
