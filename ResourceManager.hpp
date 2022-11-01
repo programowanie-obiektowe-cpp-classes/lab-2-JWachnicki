@@ -4,6 +4,7 @@
 
 class ResourceManager
 {
+    // Te 5 metod to chyba konstruktory, destruktor i kopiujący operator przypisania
     ResourceManager() //Inicjalizacja Resource
     {
         resource = new Resource;
@@ -12,6 +13,11 @@ class ResourceManager
     ~ResourceManager()
     {
         delete resource;
+    }
+
+    ResourceManager(const ResourceManager& Kopia)//Konstruktor kopiujący tak jak na zajęciach
+    {
+        resource = new Resource{Kopia.resource};
     }
     
     
