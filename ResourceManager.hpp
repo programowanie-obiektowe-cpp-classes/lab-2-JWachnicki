@@ -32,7 +32,7 @@ class ResourceManager
 
     ResourceManager& operator=(const ResourceManager& AAA)
     {
-        if(this != &AAA)
+        if(&AAA != this)
         {
             delete resource;
             resource = new Resource{*AAA.resource}
