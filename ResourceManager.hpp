@@ -18,7 +18,7 @@ class ResourceManager
 
     ResourceManager(const ResourceManager& Kopia)//Konstruktor kopiujący tak jak na zajęciach
     {
-        resource = new Resource{Kopia.resource};
+        resource = new Resource{*Kopia.resource};
     }
 
     //Od teraz jest cokolwiek za jakiekolwiek punkty
